@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    color: white;
+}
+.join_room{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100vw;
+    gap: 1rem;
+}
+.join_room input{
+  
+    height: 35px;
+    width: 300px;
+    background-color: black;
+    color: white;
+    border: 2px solid yellow;
+}
+
+.join_room input::placeholder{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    padding:5px;
+}
+.join_room button{
+    height: 40px;
+    width: 310px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: rgb(20,20,178);
+    color: white;
+    border: 2px solid yellow;
+    
+}
