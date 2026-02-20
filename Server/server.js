@@ -9,7 +9,7 @@ const server=http.createServer(app);
 // set server for websocket
 const io=new Server(server,{
     cors:{
-        origin:"http://localhost:5173",
+        origin: process.env.CLIENT_URL || "http://localhost:5173",
         methods:["GET","PUT"]
     }
 })
@@ -31,6 +31,7 @@ io.on("connection",(socket)=>{
 })
 app.use(cors());
 
-server.listen(1000,()=>{
-    console.log("server is running on port 1000");
+const PORT = process.env.PORT || 1000;
+server.listen(PORT,()=>{
+    console.log(`server is running on port ${PORT}`);
 });

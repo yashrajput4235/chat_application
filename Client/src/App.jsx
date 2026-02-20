@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import io from "socket.io-client";
 import Chat from './Chat';
 
-const socket=io("http://localhost:1000");
+const socket_url = import.meta.env.VITE_SERVER_URL || "http://localhost:1000";
+const socket=io(socket_url);
 
 const App = () => {
   // need two state variable 
