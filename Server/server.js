@@ -18,8 +18,12 @@ const io=new Server(server,{
 io.on("connection",(socket)=>{
     console.log("user connected: ",socket.id);
     // creating the route using socket
-    socket.on("join_room",()=>{
-        console.log("This is join room route");
+    socket.on("join_room",(data)=>{
+        socket.join(data);
+        console.log("This is join room route",data);
+    })
+    socket.on("send_message", (data) => {
+        socket.to(data.room).emit("receive_message", data);
     })
     socket.on("disconnect",()=>{
         console.log("user disconnected: ",socket.id);

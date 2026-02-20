@@ -36,3 +36,75 @@ body{
     border: 2px solid yellow;
     
 }
+
+.chat_container{
+    height: 600px;
+    width:400px;
+    margin:auto;
+    text-align: center;
+    /*background-color: yellow;*/
+}
+.chat_box{
+    height: 500px;
+    border:1px solid yellow;
+    background-color: rgb(61,61,49);
+    position:relative;
+}
+.chat_body{
+    position:absolute;
+    bottom:0;
+    
+}
+.chat_body input{
+    width: 350px;
+    height: 40px;
+    border:1px solid yellow;
+
+}
+.chat_body button{
+    height: 46px;
+    padding:10px;
+    width:42px;
+    background-color: rgb(127,19,229);
+    color:white;
+
+}
+.chat_body input::placeholder{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    padding:5px;
+}
+.message_content{
+    display:flex;
+    line-height:0;
+    margin:10px;
+    font-weight: bolder;
+    
+}
+ #you{
+    justify-content: flex-start;
+ }
+ #other{
+    justify-content: flex-end;
+ }
+
+#y{
+    background-color: yellow;
+    padding:10px;
+    border-radius: 5%;
+    color: black;
+}
+#b{
+    background-color: blue;
+    padding:10px;
+    border-radius: 5%;
+}
+.msg_detail{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.auto-scrolling-div::-webkit-scrollbar{
+    display:none;
+}
